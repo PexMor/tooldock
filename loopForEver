@@ -1,0 +1,17 @@
+#!/bin/sh
+
+PARAM=$1
+echo "Param: $1"
+
+if [ "x$PARAM" != "x" -a "x$PARAM" != "xparam1" ]; then
+    shift
+    /usr/local/bin/$PARAM $*
+    exit
+fi
+echo
+echo "Welcome to the docker"
+echo
+while true; do
+    date
+    sleep 30
+done

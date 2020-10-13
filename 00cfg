@@ -1,0 +1,3 @@
+DIMG=tooldock
+DINST=tooldock
+BD=$HOME/.tooldock
