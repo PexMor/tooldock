@@ -6,6 +6,7 @@ source 00mkDirs.sh
 docker run -dt \
     --name=$DINST \
     --hostname=$DINST \
+    --cap-add=CAP_NET_ADMIN \
     --user "$(id -u):$(id -g)" \
     -v $BD/home:/home \
     -v $BD/share:/share \
