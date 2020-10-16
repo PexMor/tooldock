@@ -1,0 +1,8 @@
+# example of custom_ns_bash.sh
+# should be run as root
+
+# attach the interface to bridge
+brctl addif br0 hbash
+
+# set ip address inside container
+ip netns exec ${NETNS_NAME} ip address add 192.168.1.1/24 dev ${VETH_CONT}

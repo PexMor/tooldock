@@ -32,3 +32,8 @@ You would need the running container and then attach to that container using mul
 
 > Note: to rename pane `Ctrl + b and ,`, to list sessions `tmux ls`
 
+## Bash netns
+
+This a small and independent script that let's you enter network namespace without need of containers. It utilizes the excelent tool of iproute2, which offers subcommand `netns`.
+
+It consists of two files the main script `70_netNsBash.sh` and the customization script `custom_ns_bash.sh` which __NOT__ part of the repo as it will be... well custom. But there is an example you can start with `custom_ns_bash.sh.example`.
