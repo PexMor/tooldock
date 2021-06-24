@@ -21,46 +21,47 @@ ENV X_TZ="$BA_TZ"
 
 RUN apt-get -qq update && \
     apt-get install -qqy --no-install-recommends \
-      tzdata \
-      certmonger \
-      sudo \
-      easy-rsa \
-      openvpn \
-      python3 \
-      bridge-utils \
-      inetutils-ping \
-      tcpdump \
-      xl2tpd \
-      strongswan \
-      squid \
       arping \
-      virtualenv \
-      python3-dev \
-      openconnect \
-      net-tools \
-      curl \
-      tmux \
-      psutils \
-      psmisc \
-      whois \
-      mc \
-      jq \
-      ssh \
-      dnsutils \
       avahi-daemon \
       avahi-utils \
+      bridge-utils \
+      certmonger \
+      curl \
+      dnsmasq \
+      dnsutils \
+      easy-rsa \
+      inetutils-ping \
+      iperf \
+      jq \
+      locales \
+      mc \
+      net-tools \
+      openconnect \
+      openssl libnss3-tools \
+      openvpn \
+      openvswitch-pki \
       openvswitch-switch \
       openvswitch-vtep \
-      openvswitch-pki \
-      openssl libnss3-tools \
-      iperf \
-      dnsmasq \
+      psmisc \
+      psutils \
+      python3 \
+      python3-dev \
+      smbclient \
+      squid \
+      ssh \
+      strongswan \
+      sudo \
+      tcpdump \
+      tmux \
+      tzdata \
       udhcpc \
-      locales && \
-    locale-gen en_US.UTF-8 && \
-    apt-get -qq upgrade && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+      virtualenv \
+      whois \
+      xl2tpd \
+    && locale-gen en_US.UTF-8 \
+    && apt-get -qq upgrade \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
